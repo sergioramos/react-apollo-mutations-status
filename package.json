@@ -1,0 +1,59 @@
+{
+  "name": "react-apollo-mutations-status",
+  "version": "1.0.0",
+  "license": "BSD-3-Clause",
+  "description": "Adds `loading` and `error` properties to apollo mutations",
+  "keywords": [
+    "apollo",
+    "react",
+    "mutable",
+    "loading",
+    "error",
+    "mutation",
+    "graphql"
+  ],
+  "repository": "github:ramitos/react-apollo-mutations-status",
+  "main": "dist/react-apollo-mutations-status.umd.js",
+  "jsnext:main": "dist/react-apollo-mutations-status.es.js",
+  "module": "dist/react-apollo-mutations-status.es.js",
+  "entry": "src/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "fmt": "prettier --write --single-quote src/*.js",
+    "build": "NODE_ENV=development bup",
+    "prepublish": "NODE_ENV=production bup"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-preset-joyent-portal": "^3.2.0",
+    "bup": "^2.0.6",
+    "eslint": "^4.8.0",
+    "eslint-config-joyent-portal": "^3.1.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-xo-space": "^0.16.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
+    "prettier": "^1.7.4",
+    "react": "^16.0.0"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "babel": {
+    "sourceMaps": "inline",
+    "presets": ["joyent-portal"]
+  }
+}
