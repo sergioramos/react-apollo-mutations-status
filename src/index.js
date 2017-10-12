@@ -37,15 +37,21 @@ export default (names = ['mutate']) => SourceComponent => {
     }
 
     render() {
+      const loading =
+        this.props.loading ||
+        Object.keys(this.state).some(name => this.state[name].loading);
+
+      const error =
+        this.props.error ||
+        Object.keys(this.state)
+          .filter(name => this.state[name].error)
+          .shift();
+
       return React.createElement(
         SourceComponent,
         Object.assign({}, this.props, this.state, {
-          loading: Object.keys(this.state).some(
-            name => this.state[name].loading
-          ),
-          error: Object.keys(this.state)
-            .filter(name => this.state[name].error)
-            .shift()
+          loading,
+          error
         })
       );
     }
